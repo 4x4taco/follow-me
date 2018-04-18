@@ -81,7 +81,7 @@ num_epochs = 50
 steps_per_epoch = 200
 validation_steps = 50
 workers = 20
-approximate time = 227s*50epochs= 189 min
+approximate time = 227s * 50epochs= 189 min
 ```
 
 ```python
@@ -92,8 +92,9 @@ num_epochs = 50
 steps_per_epoch = 50
 validation_steps = 50
 workers = 20
-approximate time = 
+approximate time = 69s * 50 epochs = 57 min 
 ```
+The configuration of hyper parameters between the two runs had alarge difference in the time required to compute.  Th accuracy of the second run was higher even for a reduced training time.
 
 Listed above are the Hyper parameters used for to train the FCN for Semantic Segmentaion.  The learning rate is a multiplier that is used to increase or decrease the values of the weights used for learning.  This learning rate is multiplied by the backpropagation error formed from the chain rule.  I choose a low value to increase my overal accuracy.  I could have choosen a larger value but desire accuracy over speed.  If a larger value was chooosen the model would reach steady state accuracy faster but then over and under shoot the target after reaching its critcal point.
 
