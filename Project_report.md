@@ -110,7 +110,7 @@ Workers represent the number of individual processes the platform can operate si
 ![](./pics/hero_images.PNG)
 
 ### 1st run loss vs epochs
-![](./pics/1st run.PNG)
+![](./pics/1st%20run.PNG)
 
 ### Final run loss vs epochs
 ![](./pics/train_curve_final.PNG)
