@@ -113,11 +113,14 @@ Workers represent the number of individual processes the platform can operate si
 ![](./pics/1st run.PNG)
 
 ### Final run loss vs epochs
-![](./pics/final_error.PNG)
+![](./pics/train_curve_final.PNG)
 
-### Ex1 extracted outliers
-
+### Final accuracy
 ![](./pics/final_acc_score.PNG)
+
+## Conclusion
+### Final error
+![](./pics/final_error.PNG)
 
 ### Sources
 1)  https://www.quora.com/What-is-the-difference-between-an-usual-convolution-layer-and-a-separable-convolution-layer-used-in-depthwise-separable-DL-models
