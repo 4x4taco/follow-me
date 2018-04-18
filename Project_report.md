@@ -111,6 +111,7 @@ Workers represent the number of individual processes the platform can operate si
 
 ### Model training and accuracy
 
+![](./pics/hero_images.PNG)
 ### Ex1 extracted outliers
 
 ![](./pics/final_acc_score.PNG)
