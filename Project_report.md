@@ -1,4 +1,4 @@
-## Udacity Project 3: Perception
+## Udacity Project 4: Follow me
 
 ![](./pics/intro_img.PNG)
 ### Introduction  
