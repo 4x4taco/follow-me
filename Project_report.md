@@ -75,7 +75,7 @@ def decoder_block(small_ip_layer, large_ip_layer, filters):
 
 ### Hyper parameters and the Meaning
 ```python
-first run on AWS
+first run on AWS segmentaion lab
 learning_rate = .001
 batch_size = 50
 num_epochs = 50
@@ -86,10 +86,21 @@ approximate time = 227s * 50epochs= 189 min
 ```
 
 ```python
-second runon on AWS
+second runon on AWS segmentation lab
 learning_rate = .001
 batch_size = 50
 num_epochs = 50
+steps_per_epoch = 50
+validation_steps = 50
+workers = 20
+approximate time = 69s * 50 epochs = 57 min 
+```
+
+```python
+final run on AWS Deep Learning lab
+learning_rate = .001
+batch_size = 50
+num_epochs = 75
 steps_per_epoch = 50
 validation_steps = 50
 workers = 20
