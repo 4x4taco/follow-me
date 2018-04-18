@@ -1,10 +1,8 @@
 ## Udacity Project 3: Perception
 
-![](./pics/hero_images.PNG)
+![](./pics/intro_img.PNG)
 ### Introduction  
 The purpose of the Udacity follow me project was to get the students familiar with buidling and training fully convolutional neural networks for the purpose performing semantic segmenation.  The Semantic segmentation was to locate the hero individual in an environment full of other people.  Once the hero was found the quad copter was supposed to follow the hero target around the environment.  
-
-
 
 
 ### Environment Setup
@@ -19,12 +17,10 @@ The encode is essentially a fully convolutional network that takes an input imag
 ### Decoder
 The Decoder is essentially the opposite of the Encoder.  The Decoder takes the output from the 1x1 convolutions and upscales them to their original size.  This is a strength of FCN's, the fact that the input image size does not matter for the trainign of the network.  Billinear upsampling was used for this project.  This means that for the 2 x 2 filter the upsampling to a 4x4 would be linearly interpolated between the values.  layer concatenation was implemented in the decoder block to improve accuracy.  The layer concatenation works by taking an unsampled layer with a larger amount of spatial information and adding to it pixel by pixel the filtered information. 
 
-### Upsampling Interpolation
-
 ![](./pics/lin_int.PNG)
 
 ### FCN layer construction
-3 functions were provided by Udacity to ease the burden of creating all of the layers for the FCN.  The the seperable_conv2d_batchnorm function was used in both th Encoder and Decoder blocks.  The strides were were set to two with same padding which means that the image after applying the kernel and strides that the output will remain the same size after the convolutions are applied.  The functions both used relu activations which are easy to implement and allow a controllable non-linearity to be applied to the system allowing the model to approximate more complex problems. A seperable 2d convolution with batch normalization was used via the kera module.  Seperable convolutions differ from normal convolutions in the way that pixels are mapped.  Seperable convolutions perofrm both a depthwise convolution and point by point convolution.  The settings for these convolutions were are shown below in the code section with the inputs to the functions being (inputs/input_layer, depth of filter, strides).  The decoder layers hasve the same input.  
+3 functions were provided by Udacity to ease the burden of creating all of the layers for the FCN.  The the seperable_conv2d_batchnorm function was used in both th Encoder and Decoder blocks.  The strides were were set to two with same padding.  The functions both used relu activations which are easy to implement and allow a controllable non-linearity to be applied to the system this allows the model to approximate more complex problems. A seperable 2d convolution with batch normalization was used via the kera module.  Seperable convolutions differ from normal convolutions in the way that pixels are mapped.  Seperable convolutions perofrm both a depthwise convolution and point by point convolution.  The settings for these convolutions were are shown below in the code section with the inputs to the functions being (inputs/input_layer, depth of filter, strides).  The decoder layers hasve the same input.  
 
 ```python
 def fcn_model(inputs, num_classes):
@@ -50,7 +46,7 @@ def bilinear_upsample(input_layer):
     return output_layer
 ```
 ![](./pics/fcn_diag1.PNG)
-The heirarch of the FCN constructed started with a a 256x256x3 rgb image.  This image was passed through a convolutional filter of 3x3 with a stride of two that reduced the height and width to: layer1 = 128x128, layer2=64x64 the coresponding decoder layers are the same height and width.  The 1x1 convolutions had a depth of 256.  It was thought that having a higher number for the 1x1 convolutions resulted in a higher accruacy.
+The heirarch of the FCN constructed started with a a 256x256x3 rgb image.  This image was passed through a convolutional filter of 3x3 with a stride of two that reduced the height and width to: layer1 = 128x128, layer2=64x64 the coresponding decoder layers are the same height and width.  The 1x1 convolutions had a depth of 256.  It was thought that having a higher number for the 1x1 convolutions would result in the model being able to differentiate more precisely.
 
 ### FCN Model and Parameters
 An Encoder and Decoder function were created to aid in the setup of the individaul layers.  Using these functions individual layers were created.  The order of the layers starts with the first layer after the input image and extends to layer 5.  Layer 5 is positioned just before the ouput of the FCN.    
@@ -110,8 +106,15 @@ Steps per epoch represen the number of times the batch size is input into the ne
 Workers represent the number of individual processes the platform can operate simultaneously.  This is analgous to thinking about men performing some time of construction/renovation.  The more workers a project has the faster it can be accomplished but the tougher it can be to organize.  If there is slight deviation to the orginaization the step can be performed out of order and cause signifigant set backs to the project.  Since the cpu is responsible for the coordination it can be taxing on the system if too many workers are called.  I choose a number of 20 which represents approximately 5 workers per cpu.  Given the high performance of the AWS machine I didnt think it was too high.
 
 ### Model training and accuracy
-
+### Validation images
 ![](./pics/hero_images.PNG)
+
+### 1st run loss vs epochs
+![](./pics/1st run.PNG)
+
+### Final run loss vs epochs
+![](./pics/final_error.PNG)
+
 ### Ex1 extracted outliers
 
 ![](./pics/final_acc_score.PNG)
