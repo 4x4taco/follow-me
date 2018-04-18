@@ -108,25 +108,31 @@ Steps per epoch represen the number of times the batch size is input into the ne
 Workers represent the number of individual processes the platform can operate simultaneously.  This is analgous to thinking about men performing some time of construction/renovation.  The more workers a project has the faster it can be accomplished but the tougher it can be to organize.  If there is slight deviation to the orginaization the step can be performed out of order and cause signifigant set backs to the project.  Since the cpu is responsible for the coordination it can be taxing on the system if too many workers are called.  I choose a number of 20 which represents approximately 5 workers per cpu.  Given the high performance of the AWS machine I didnt think it was too high.
 
 ### Model training and accuracy
-### Validation images
-![](./pics/hero_images.PNG)
+### Following Target
+![](./pics/pics_following_target.PNG)
 
-### 1st run loss vs epochs
+### Patrolling without Target
+![](./pics/patrolling_without_target.PNG)
+
+### Patrolling with Targe
+![](./pics/patrolling_with_target.PNG)
+
+### 1st run loss vs epochs segmentation lab
 ![](./pics/1st%20run.PNG)
 
-### Final run loss vs epochs
+### Final run loss vs epochs segmentation lab
 ![](./pics/train_curve_final.PNG)
 
-### Final accuracy
-![](./pics/final_acc_score.PNG)
 
 ## Conclusion
 Utilizing the AWS system I was able to train my model on the images provided in the repository.  I was able to get my accuracy up to 50% in a short amount of time by tweeking the parameters.  I tried several times to implement my trained model in the quad copter environment to test the follower function.  I tried implementig on two different machines with the RoboND environemnt installed the error below was received on both machines.  I ensured that the directions were correctly followed and that the correct dependencies had been installed to support the simulator.  I used AWS s3 buckets to transfer files to an from my AWS instnace and local directories.  I tested this feature on a known file type to ensure that there wasnt some type of conversion error and it worked perfectly.  I did not see any common problems for the error I received and dont know what could be causing it.  Moving forwared I would like to get the simulator to work correctly and capture more data with the hero in the environemt to implement a higher accruracy for my model.  Another topic of interest would be to reduce the filter size of my model until a change of performance was noted.
 
 We used pictures of people to train this FCN to look for a specific person but images of almost any object could be detected given the right training set.  These images could be cars, animals, types of plants, or even medical imagery looking for anomalies.
+### Final accuracy
+![](./pics/accuracy.PNG)
 
-### Final error
-![](./pics/final_error.PNG)
+### Final loss vs epoch
+![](./pics/training_curves.PNG)
 
 ### Sources
 1)  https://www.quora.com/What-is-the-difference-between-an-usual-convolution-layer-and-a-separable-convolution-layer-used-in-depthwise-separable-DL-models
