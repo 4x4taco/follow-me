@@ -2,7 +2,7 @@
 
 ![](./pics/intro_img.PNG)
 ### Introduction  
-The purpose of the Udacity follow me project was to get the students familiar with buidling and training a fully convolutional neural network for the purpose of performing semantic segmenation.  The semantic segmentation was to locate the hero individual in an environment full of other people.  Once the hero was found the quad copter was supposed to follow the hero target around the environment.  
+The purpose of the Udacity follow me project was to get the students familiar with buidling and training a fully convolutional neural network for the purpose of performing semantic segmenation.  The semantic segmentation objective was to locate the hero individual in an environment full of other people.  Once the hero was found the quad copter was supposed to follow the hero target around the environment.  
 
 
 ### Environment Setup
