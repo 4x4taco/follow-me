@@ -143,7 +143,7 @@ Pictures of people were used to train this FCN to look for a specific person, bu
 ### Future enhancements
 Moving forwared I would like to get the simulator to work correctly and capture more data with the hero in the environent, to implement a higher accruracy for my model.  Some items to improve the accuracy would be additional photos of the hero in the environment.  This data could be used to further train the model.  Lowering the learning rate would also improve the accuracy.  I don't believe the model needs to be trained for 75 epochs with a learning rate of .001 as was the case for the last model computed.  Looking at the Final loss vs epoch the train loss and val loss begin to seperate with more epochs.  This is refered to as overfitting.  Keeping the epochs at 75 and lowering the learning rate would produce a more accurate model.
 ### Final accuracy
-![](./pics/accuracy.PNG)
+![](./pics/error_final.PNG)
 
 ### Final loss vs epoch
 ![](./pics/training_curve_final.PNG)
