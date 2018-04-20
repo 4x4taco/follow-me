@@ -151,4 +151,6 @@ Moving forwared I would like to get the simulator to work correctly and capture 
 ### Sources
 1)  https://www.quora.com/What-is-the-difference-between-an-usual-convolution-layer-and-a-separable-convolution-layer-used-in-depthwise-separable-DL-models
 
-2  https://en.wikipedia.org/wiki/Convolutional_neural_network
+2)  https://en.wikipedia.org/wiki/Convolutional_neural_network
+
+3)  various Udacity notes and code
