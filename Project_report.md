@@ -6,7 +6,7 @@ The purpose of the Udacity follow me project was to get the students familiar wi
 
 
 ### Environment Setup
-After using git and cloning the RoboND-Segmentation-Lab the contents were explored and the Segementation-Lab.ipynb file was opened in Jupyter Notebook to begin building the FCN.
+After using git and cloning the RoboND-Segmentation-Lab the contents were explored and the Segementation-Lab.ipynb file was opened in Jupyter Notebook to begin building the FCN.  After the code had been tested the functions used for the segmentaion labe were copied to the deep learning lab.  The simulation was run agin with various hyper parameters to obtain the highest accuracy.
 
 ### AWS Configuration
 The most difficult portion of this project was transferring files from my local machine to the AWS instance, I had created to speed up training of the Neural Network.  I choose the route of setting up a role within AWS.  This role provided full access to my S3 object that contained all of the data for the project.  Once the role was created I had create a new instance that included access to the S3 object.  AWS client tools then had to be installed and the files were copied to the Ubuntu/home directory for easy access.  
