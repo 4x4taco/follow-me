@@ -120,7 +120,7 @@ Workers represent the number of individual processes the platform can operate si
 
 ### Model training and accuracy
 ### Following Target
-![](./pics/pics_following_target.PNG)
+![](./pics/following-target.PNG)
 
 ### Patrolling without Target
 ![](./pics/patrolling_without_target.PNG)
@@ -132,7 +132,7 @@ Workers represent the number of individual processes the platform can operate si
 ![](./pics/1st%20run.PNG)
 
 ### Final run loss vs epochs segmentation lab
-![](./pics/train_curve_final.PNG)
+![](./pics/training_curves.PNG)
 
 
 ## Conclusion
@@ -146,7 +146,7 @@ Moving forwared I would like to get the simulator to work correctly and capture 
 ![](./pics/accuracy.PNG)
 
 ### Final loss vs epoch
-![](./pics/training_curves.PNG)
+![](./pics/training_curve_final.PNG)
 
 ### Sources
 1)  https://www.quora.com/What-is-the-difference-between-an-usual-convolution-layer-and-a-separable-convolution-layer-used-in-depthwise-separable-DL-models
