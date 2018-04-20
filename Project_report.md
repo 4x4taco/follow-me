@@ -97,14 +97,13 @@ approximate time = 69s * 50 epochs = 57 min
 ```
 
 ```python
-final run on AWS Deep Learning lab
-learning_rate = .001
+learning_rate = .0007
 batch_size = 50
-num_epochs = 75
-steps_per_epoch = 50
+num_epochs = 40
+steps_per_epoch = 100
 validation_steps = 50
 workers = 20
-approximate time = 110s * 75 epochs = 138 min 
+approximate time = 187s * 100 epochs = 311 min 
 ```
 The configuration of hyper parameters between the two runs of the segmentaiton lab had a large difference in the time required to compute.  Th accuracy of the second run for the segmentaion lab was higher even for a reduced training time.  I increased the number of epochs to 75 to reach the the accuracy goal of 41%.  
 
