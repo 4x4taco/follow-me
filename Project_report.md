@@ -97,6 +97,7 @@ approximate time = 69s * 50 epochs = 57 min
 ```
 
 ```python
+final run on AWS Deep learning lab
 learning_rate = .0007
 batch_size = 50
 num_epochs = 40
